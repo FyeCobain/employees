@@ -1,0 +1,64 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [ "error", { "type": "attribute", "prefix": "app", "style": "camelCase" } ],
+        "@angular-eslint/component-selector": [ "error", { "type": "element", "prefix": "app", "style": "kebab-case" } ],
+        "semi": "error",
+        "indent": [ "error", 2, { "SwitchCase": 1 } ],
+        "linebreak-style": [ "error", "unix" ],
+        "eol-last": [ "error", "always" ],
+        "no-trailing-spaces": "error",
+        "eqeqeq": [ "error", "always" ],
+        "yoda": [ "error", "never" ],
+        "require-yield": "error",
+        "quotes": [ "error", "single", { "avoidEscape": true } ],
+        "no-unneeded-ternary": "error",
+        "prefer-const": "error",
+        "comma-spacing": [ "error", { "before": false, "after": true } ],
+        "comma-dangle": [ "error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never"
+        } ],
+        "array-bracket-spacing": [ "error", "always" ],
+        "array-bracket-newline": ["error", "consistent"],
+        "array-element-newline": [ "error", { "ArrayExpression": "consistent", "ArrayPattern": "consistent" } ],
+        "template-curly-spacing": [ "error", "always" ],
+        "object-curly-spacing": [ "error", "always" ],
+        "object-curly-newline": [ "error",  { "consistent": true } ],
+        "object-property-newline": [ "error", { "allowAllPropertiesOnSameLine": true} ],
+        "brace-style": [ "error", "stroustrup", { "allowSingleLine": true } ],
+        "space-before-blocks": [ "error", "always" ],
+        "spaced-comment": [ "error", "always" ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {
+        "linebreak-style": [ "error", "unix" ]
+      }
+    }
+  ]
+}
